@@ -2,45 +2,59 @@ import { useEffect, useState } from "react";
 import axios from "../axios";
 
 export const Donate = ({ modal, setModal }) => {
-  const [donationAmount, setDonationAmount] = useState(null);
-  const [error, setError] = useState(false);
+  const [donationAmount, setDonationAmount] = useState(0);
+  const [error, setError] = useState("");
   const amountOptions = [1000, 5000, 10000, "Custom"];
 
+  const changeHandler = (e) => {
+    const value = parseInt(e.target.value);
+    if (value < 1) {
+      setError("Amount must be greater than or equal to 1");
+    } else {
+      setError("");
+      setDonationAmount(value);
+    }
+  };
+
   const checkoutHandler = async () => {
-    const {
-      data: { key },
-    } = await axios.get("/api/getkey");
+    if (parseInt(donationAmount) >= 1) {
+      const {
+        data: { key },
+      } = await axios.get("/api/getkey");
 
-    const {
-      data: { order },
-    } = await axios.post("/api/checkout", {
-      donationAmount,
-    });
+      const {
+        data: { order },
+      } = await axios.post("/api/checkout", {
+        donationAmount,
+      });
 
-    const options = {
-      key,
-      amount: order.amount,
-      currency: "INR",
-      name: "Hope Givers Foundation",
-      description: "Old Age Home For Eldrely",
-      //must have logo in the image below
-      image: "https://avatars.githubusercontent.com/u/25058652?v=4",
-      order_id: order.id,
-      callback_url: "/api/paymentverification",
-      prefill: {
-        name: "Gaurav Kumar",
-        email: "gaurav.kumar@example.com",
-        contact: "9999999999",
-      },
-      notes: {
-        address: "Razorpay Corporate Office",
-      },
-      theme: {
-        color: "#121212",
-      },
-    };
-    const razor = new window.Razorpay(options);
-    razor.open();
+      const options = {
+        key,
+        amount: order.amount,
+        currency: "INR",
+        name: "Hope Givers Foundation",
+        description: "Old Age Home For Eldrely",
+        //must have logo in the image below
+        image: "https://avatars.githubusercontent.com/u/25058652?v=4",
+        order_id: order.id,
+        callback_url: "/api/paymentverification",
+        prefill: {
+          name: "Gaurav Kumar",
+          email: "gaurav.kumar@example.com",
+          contact: "9999999999",
+        },
+        notes: {
+          address: "Razorpay Corporate Office",
+        },
+        theme: {
+          color: "#121212",
+        },
+      };
+      const razor = new window.Razorpay(options);
+      razor.open();
+    } else {
+      setError("Enter valid amount");
+    }
   };
 
   return (
@@ -76,7 +90,7 @@ export const Donate = ({ modal, setModal }) => {
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, nam.
         </p>
-        {error && <p className="text-red-500">Please enter valid amount</p>}
+        {error.length > 0 && <span className="text-red-500">{error}</span>}
         <div className="w-full relative flex items-center">
           <span className="absolute pl-3">₹</span>
           <input
@@ -85,7 +99,7 @@ export const Donate = ({ modal, setModal }) => {
             className="pl-7 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             placeholder="Doe"
             value={donationAmount}
-            onChange={(e) => setDonationAmount(e.target.value)}
+            onChange={changeHandler}
             min={0}
             required
           />
