@@ -6,6 +6,7 @@ import { AdminPanel } from "./pages/AdminPanel";
 import { RequiresAuth } from "./RequiresAuth";
 import PageNotFound from "./pages/PageNotFound";
 import { About } from "./pages/About";
+import { ContactUs } from "./pages/ContactUs";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
 
         <Route path="/paymentsuccess" element={<PaymentSuccess />} />
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/contact-us" element={<ContactUs />}></Route>
       </Routes>
       <Footer />
     </div>
