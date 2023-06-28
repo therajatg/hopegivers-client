@@ -13,7 +13,7 @@ export default function AdminLogin() {
     e.preventDefault();
     if (username === "admin" && password === "Hope.@2346") {
       localStorage.setItem("token", true);
-      navigate("/");
+      navigate(0);
     } else {
       setError(true);
     }
