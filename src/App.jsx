@@ -5,6 +5,7 @@ import { PaymentSuccess } from "./pages/PaymentSuccess";
 import { AdminPanel } from "./pages/AdminPanel";
 import { RequiresAuth } from "./RequiresAuth";
 import PageNotFound from "./pages/PageNotFound";
+import { About } from "./pages/About";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
             </RequiresAuth>
           }
         />
+        <Route path="/about" element={<About />} />
+
         <Route path="/paymentsuccess" element={<PaymentSuccess />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

@@ -1,69 +1,78 @@
+import img1 from "../images/img1.jpeg";
+import img2 from "../images/img2.jpeg";
+import img3 from "../images/img3.jpeg";
+
 export const WhatWeDo = () => {
   return (
-    <div className="mx-5 sm:mx-40">
-      <div className="my-20 sm:flex sm:gap-x-20">
-        <img
-          src="https://picsum.photos/600/300"
-          alt=""
-          className="object-cover w-100 mb-5 sm:mb-0"
-        />
+    <div className="mx-5 lg:mx-40">
+      <div className="my-20 lg:flex lg:gap-x-20">
+        <img src={img1} alt="" className="max-h-80 object-cover mb-5 lg:mb-0" />
         <div>
-          <h1 className="text-xl font-bold">
-            Medical support to the aged people
-          </h1>
+          <h1 className="text-xl font-bold">Old Age Homes</h1>
           <p>
-            An old age home is usually the place, a home for those old people
-            who have no one to look after them or those who have been thrown out
-            of their homes by their own children. The place is of course like
-            home where the inmates get all the facilities for a routine living,
-            like food, clothing, medical and shelter. An old age home is usually
-            the place, a home for those old people who have no one to look after
-            them.
+            Established with the vision of creating a better future for the
+            elderly, Hope Givers Foundation operates free of cost old age homes
+            where we provide a safe and nurturing environment for our cherished
+            seniors. We understand the importance of companionship, dignity, and
+            quality care in their lives. Our dedicated team of professionals is
+            committed to ensuring that our residents receive the highest
+            standard of assistance, including nutritious meals, medical
+            attention, and emotional support. By offering a warm and welcoming
+            home, we strive to bring happiness and comfort to the lives of those
+            who have dedicated their own years to building our communities.
           </p>
         </div>
       </div>
-      <div className="mb-20 sm:flex sm:flex-row-reverse sm:gap-x-20">
+      <div className="mb-20 lg:flex lg:flex-row-reverse lg:gap-x-20">
         <img
-          src="https://picsum.photos/600/300"
+          src={img2}
           alt=""
-          className="object-cover w-100 mb-5 sm:mb-0"
+          className="max-h-80 object-cover w-100 mb-5 lg:mb-0"
         />
         <div>
-          <h1 className="text-xl font-bold">
-            Medical support to the aged people
-          </h1>
+          <h1 className="text-xl font-bold">Free of Cost Medical Equipments</h1>
           <p>
-            An old age home is usually the place, a home for those old people
-            who have no one to look after them or those who have been thrown out
-            of their homes by their own children. The place is of course like
-            home where the inmates get all the facilities for a routine living,
-            like food, clothing, medical and shelter. An old age home is usually
-            the place, a home for those old people who have no one to look after
-            them.
+            Recognizing the importance of access to proper medical equipment, we
+            have established a program to provide essential medical devices to
+            those who cannot afford them. From mobility aids to respiratory
+            support equipment and more, we strive to bridge the gap between
+            necessity and accessibility. By removing the financial burden
+            associated with medical equipment, we enable individuals to focus on
+            their recovery, regain their independence, and improve their overall
+            quality of life.
           </p>
         </div>
       </div>
-      <div className="mb-20 sm:flex  sm:gap-x-20">
+      <div className="mb-20 lg:flex lg:gap-x-20">
         <img
-          src="https://picsum.photos/600/300"
+          src={img3}
           alt=""
-          className="object-cover w-100 mb-5 sm:mb-0"
+          className="max-h-80 object-cover w-100 mb-5 lg:mb-0"
         />
         <div>
-          <h1 className="text-xl font-bold">
-            Medical support to the aged people
-          </h1>
+          <h1 className="text-xl font-bold">Blanket Distribution in Winter</h1>
           <p>
-            An old age home is usually the place, a home for those old people
-            who have no one to look after them or those who have been thrown out
-            of their homes by their own children. The place is of course like
-            home where the inmates get all the facilities for a routine living,
-            like food, clothing, medical and shelter. An old age home is usually
-            the place, a home for those old people who have no one to look after
-            them.
+            In addition to our old age homes, Hope Givers Foundation runs
+            various outreach programs to address the urgent needs of the
+            underprivileged. During harsh winters, we distribute blankets to
+            vulnerable individuals and families, providing them with a shield
+            against the biting cold. Through this initiative, we aim to bring
+            warmth and relief to those who lack the means to protect themselves
+            from the harsh elements. It is our belief that a blanket can provide
+            more than just physical warmth; it also symbolizes compassion and
+            the assurance that someone cares.
           </p>
         </div>
       </div>
+      <p className="text-l font-bold mb-20">
+        Hope Givers Foundation is fueled by the generosity and support of
+        compassionate individuals like you. Together, we can make a difference
+        in the lives of those who need it most. We invite you to join us in our
+        mission and become a beacon of hope for the elderly, the vulnerable, and
+        the less fortunate. Your donations and contributions are tax-exempted,
+        ensuring that every rupee goes directly towards supporting our
+        initiatives and creating a better tomorrow.
+      </p>
     </div>
   );
 };

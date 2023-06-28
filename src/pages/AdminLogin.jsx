@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// User -- admin
-// Pass -- Hope.@2346
 export default function AdminLogin() {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
