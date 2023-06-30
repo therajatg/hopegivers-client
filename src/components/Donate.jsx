@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "../axios";
+import logo from "../images/nav-logo.png";
 
 export const Donate = ({ modal, setModal }) => {
   const [donationAmount, setDonationAmount] = useState();
@@ -34,19 +35,10 @@ export const Donate = ({ modal, setModal }) => {
         currency: "INR",
         name: "Hope Givers Foundation",
         description: "Old Age Home For Eldrely",
-        //must have logo in the image below
-        image: "https://avatars.githubusercontent.com/u/25058652?v=4",
+        image: logo,
         order_id: order.id,
         callback_url: "http://localhost:5000/api/payment/paymentverification",
         redirect: true,
-        prefill: {
-          name: "Gaurav Kumar",
-          email: "gaurav.kumar@example.com",
-          contact: "9999999999",
-        },
-        notes: {
-          address: "Razorpay Corporate Office",
-        },
         theme: {
           color: "#121212",
         },
