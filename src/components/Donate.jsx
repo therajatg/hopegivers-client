@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "../axios";
 
 export const Donate = ({ modal, setModal }) => {
-  const [donationAmount, setDonationAmount] = useState(0);
+  const [donationAmount, setDonationAmount] = useState();
   const [error, setError] = useState("");
   const amountOptions = [1000, 5000, 10000, "Custom"];
 
@@ -20,11 +20,11 @@ export const Donate = ({ modal, setModal }) => {
     if (parseInt(donationAmount) >= 1) {
       const {
         data: { key },
-      } = await axios.get("/api/getkey");
+      } = await axios.get("/api/payment/getkey");
 
       const {
         data: { order },
-      } = await axios.post("/api/checkout", {
+      } = await axios.post("/api/payment/checkout", {
         donationAmount,
       });
 
@@ -37,7 +37,8 @@ export const Donate = ({ modal, setModal }) => {
         //must have logo in the image below
         image: "https://avatars.githubusercontent.com/u/25058652?v=4",
         order_id: order.id,
-        callback_url: "/api/paymentverification",
+        callback_url: "http://localhost:5000/api/payment/paymentverification",
+        redirect: true,
         prefill: {
           name: "Gaurav Kumar",
           email: "gaurav.kumar@example.com",
@@ -52,6 +53,7 @@ export const Donate = ({ modal, setModal }) => {
       };
       const razor = new window.Razorpay(options);
       razor.open();
+      setDonationAmount("");
     } else {
       setError("Enter valid amount");
     }
@@ -97,7 +99,7 @@ export const Donate = ({ modal, setModal }) => {
             type="number"
             id="last_name"
             className="pl-7 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-            placeholder="Doe"
+            placeholder="Enter amount"
             value={donationAmount}
             onChange={changeHandler}
             min={0}

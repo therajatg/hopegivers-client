@@ -32,6 +32,7 @@ function App() {
         <Route path="/paymentsuccess" element={<PaymentSuccess />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/paymentsuccess" element={<PaymentSuccess />} />
       </Routes>
       <Footer />
     </div>
