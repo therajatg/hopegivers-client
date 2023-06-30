@@ -16,7 +16,11 @@ export const LatestPics = () => {
   return (
     <div className="flex justify-center flex-wrap gap-x-8 gap-y-12 mb-12">
       {images.map((each) => (
-        <img src={each.imageUrl} className="max-h-80 object-cover" />
+        <img
+          key={each.imageUrl}
+          src={each.imageUrl}
+          className="max-h-80 object-cover"
+        />
       ))}
     </div>
   );
