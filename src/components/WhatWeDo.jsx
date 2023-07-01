@@ -1,11 +1,11 @@
-import img1 from "../images/img1.jpeg";
-import img2 from "../images/img2.jpeg";
-import img3 from "../images/img3.jpeg";
+// import img1 from "../images/img1.jpeg";
+// import img2 from "../images/img2.jpeg";
+// import img3 from "../images/img3.jpeg";
 
 export const WhatWeDo = () => {
   return (
-    <div className="mx-5 lg:mx-40">
-      <div className="my-20 lg:flex lg:gap-x-20">
+    <div className="mx-5 lg:mx-52">
+      {/* <div className="my-20 lg:flex lg:gap-x-20">
         <img src={img1} alt="" className="max-h-80 object-cover mb-5 lg:mb-0" />
         <div>
           <h1 className="text-xl font-bold">Old Age Homes</h1>
@@ -23,7 +23,7 @@ export const WhatWeDo = () => {
           </p>
         </div>
       </div>
-      <div className="mb-20 lg:flex lg:flex-row-reverse lg:gap-x-20">
+      <div className="mb-20 lg:flex lg:flex-row-reverse lg:gap-x-20 ">
         <img
           src={img2}
           alt=""
@@ -72,7 +72,7 @@ export const WhatWeDo = () => {
         the less fortunate. Your donations and contributions are tax-exempted,
         ensuring that every rupee goes directly towards supporting our
         initiatives and creating a better tomorrow.
-      </p>
+      </p> */}
     </div>
   );
 };

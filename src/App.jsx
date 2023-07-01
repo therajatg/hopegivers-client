@@ -9,13 +9,17 @@ import { About } from "./pages/About";
 import { ContactUs } from "./pages/ContactUs";
 import { AdminPics } from "./components/AdminPics";
 import { AdminContact } from "./components/AdminContact";
+import { Volunteer } from "./pages/Volunteer";
+import { OurWork } from "./pages/OurWork";
+import { useState } from "react";
 
 function App() {
+  const [modal, setModal] = useState(false);
   return (
     <div className="h-[100vh]">
-      <Navbar />
+      <Navbar modal={modal} setModal={setModal} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home modal={modal} setModal={setModal} />} />
         <Route
           path="/admin"
           element={
@@ -28,11 +32,11 @@ function App() {
           <Route path="/admin/contact" element={<AdminContact />} />
         </Route>
         <Route path="/about" element={<About />} />
-
-        <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="/our-work" element={<OurWork />} />
+        <Route path="/volunteer" element={<Volunteer />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </div>

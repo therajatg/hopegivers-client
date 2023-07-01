@@ -1,117 +1,105 @@
 import React from "react";
-import { CSSTransition } from "react-transition-group";
+// import presidentImage from "../images/president.jpg";
+// import secretaryImage from "../images/secretary.jpg";
+import presidentImage from "../images/nav-logo.png";
+import secretaryImage from "../images/nav-logo.png";
 
 export const About = () => {
-  const animateInDuration = 500;
-  const animateOutDuration = 300;
-
   return (
-    <section className="bg-gray-100 py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">
-          About Hope Givers Foundation
-        </h2>
-
-        <div className="flex flex-col lg:flex-row items-center mb-12">
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={animateInDuration}
-            classNames="fade-left"
-          >
-            <div className="lg:w-1/2 lg:mr-8">
-              <img
-                src="https://picsum.photos/200
-                "
-                alt="Elderly residents"
-                className="w-full h-auto mb-6"
-              />
-              <p className="text-gray-700 text-lg">
-                At Hope Givers Foundation, we are dedicated to providing love,
-                care, and support to the elderly. Our mission is to create a
-                nurturing environment where they can thrive and enjoy their
-                golden years. Through our free-of-cost old age homes, we offer a
-                range of services including nutritious meals, medical
-                assistance, and emotional well-being support. We believe in
-                upholding their dignity and honoring their contributions to
-                society.
+    <div>
+      {/* Hero section */}
+      <section className="bg-blue-500 py-12">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">
+              About Hope Givers Foundation
+            </h1>
+            <p className="text-white text-lg">
+              Hope Givers Foundation is a social, cultural, economic, and
+              rural/urban community development organization dedicated to the
+              upliftment of the weaker sections of society. Established in 2022
+              as a charitable trust in Jaipur, Rajasthan, we strive to bring
+              about positive change and empower marginalized communities.
+            </p>
+            <div className="mt-8">
+              <p className="text-white text-lg">Reg. No: 202201024004756</p>
+              <p className="text-white text-lg">
+                80G Reg. No: AACTH6216KF20221
               </p>
+              <p className="text-white text-lg">CSR Reg. No: CSR00032050</p>
             </div>
-          </CSSTransition>
-
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={animateInDuration}
-            classNames="fade-right"
-          >
-            <div className="lg:w-1/2 lg:ml-8">
-              <img
-                src="https://picsum.photos/200
-                "
-                alt="Blanket distribution"
-                className="w-full h-auto mb-6"
-              />
-              <p className="text-gray-700 text-lg">
-                We also reach out to those in need during harsh winters by
-                distributing blankets. This initiative aims to provide warmth
-                and comfort to vulnerable individuals and families. We believe
-                that a simple act of kindness can go a long way in bringing hope
-                to those facing adversity. By wrapping them in the warmth of our
-                care, we strive to make a positive difference in their lives.
-              </p>
-            </div>
-          </CSSTransition>
+          </div>
         </div>
+      </section>
 
-        <div className="flex flex-col lg:flex-row items-center">
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={animateInDuration}
-            classNames="fade-left"
-          >
-            <div className="lg:w-1/2 lg:mr-8">
-              <img
-                src="https://picsum.photos/200
-                "
-                alt="Medical equipment donation"
-                className="w-full h-auto mb-6"
-              />
-              <p className="text-gray-700 text-lg">
-                Our commitment to improving lives extends to providing essential
-                medical equipment free of cost to those in need. We understand
-                the challenges faced by individuals who lack access to proper
-                healthcare resources. Through our program, we ensure that they
-                receive the necessary medical devices, enabling them to lead
-                healthier and more independent lives. We believe that everyone
-                deserves the opportunity to thrive, regardless of their
-                financial circumstances.
-              </p>
+      {/* President and Secretary section */}
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">Meet Our Team</h2>
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/2 p-4">
+                <img
+                  src={presidentImage}
+                  alt="President"
+                  className="rounded-full w-64 h-64 mx-auto mb-4"
+                />
+                <h3 className="text-lg font-semibold mb-2">
+                  President - John Doe
+                </h3>
+                <p>
+                  John Doe is a dedicated individual with a passion for
+                  community development and social welfare. With years of
+                  experience in the nonprofit sector, he leads Hope Givers
+                  Foundation with compassion and a strong commitment to
+                  improving the lives of those in need.
+                </p>
+              </div>
+              <div className="md:w-1/2 p-4">
+                <img
+                  src={secretaryImage}
+                  alt="Secretary"
+                  className="rounded-full w-64 h-64 mx-auto mb-4"
+                />
+                <h3 className="text-lg font-semibold mb-2">
+                  Secretary - Jane Smith
+                </h3>
+                <p>
+                  Jane Smith is a dedicated advocate for social justice and
+                  equality. With her exceptional organizational skills and
+                  passion for making a difference, she plays a crucial role in
+                  the day-to-day operations of Hope Givers Foundation and
+                  ensures its programs and initiatives are executed effectively.
+                </p>
+              </div>
             </div>
-          </CSSTransition>
-
-          <CSSTransition
-            in={true}
-            appear={true}
-            timeout={animateInDuration}
-            classNames="fade-right"
-          >
-            <div className="lg:w-1/2 lg:ml-8">
-              <p className="text-gray-700 text-lg">
-                Hope Givers Foundation is driven by the generosity and support
-                of individuals like you. Your contribution, whether through
-                donations or volunteering your time, makes a significant impact
-                in our ability to bring hope and care to those who need it most.
-                Together, we can create a brighter future and make a lasting
-                difference in the lives of the elderly and the less fortunate.
-                Join us on this meaningful journey and be a part of the Hope
-                Givers community.
-              </p>
-            </div>
-          </CSSTransition>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Donations section */}
+      <section className="bg-gray-200 py-12">
+        <div className="container mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Donations and Tax Benefits
+            </h2>
+            <p className="text-lg mb-8">
+              Donations to Hope Givers Foundation can make a significant impact
+              on the lives of those in need. As an eligible charitable
+              institution, we provide tax benefits to donors under Section 80G
+              of the Income Tax Act, 1961. By donating to us, taxpayers can
+              claim deductions ranging from 50% to 100% of the donated amount,
+              helping them save on taxes while supporting our initiatives.
+            </p>
+            <p className="text-lg">
+              Your generous contributions enable us to continue our work and
+              make a difference in the lives of the less fortunate. Together, we
+              can bring hope and create a brighter future for all.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };

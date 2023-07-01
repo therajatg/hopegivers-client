@@ -80,9 +80,12 @@ export const Donate = ({ modal, setModal }) => {
             />
           </svg>
         )}
-        <h1 className="text-xl font-bold">Support Us</h1>
+        <h1 className="text-xl font-bold">Make a Donation</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, nam.
+          Your generous contributions can help us continue our important work
+          and make a lasting impact on the lives of those in need. As a
+          registered charitable trust, your donations are tax exempted under
+          Section 80G of the Income Tax Act, 1961.
         </p>
         {error.length > 0 && <span className="text-red-500">{error}</span>}
         <div className="w-full relative flex items-center">
@@ -111,9 +114,9 @@ export const Donate = ({ modal, setModal }) => {
           ))}
         </div>
         <button
-          type="button"
-          class="text-white font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           onClick={checkoutHandler}
+          to="/donate"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out"
         >
           Donate Now
         </button>
