@@ -1,8 +1,8 @@
 import React from "react";
 // import presidentImage from "../images/president.jpg";
 // import secretaryImage from "../images/secretary.jpg";
-import presidentImage from "../images/nav-logo.png";
-import secretaryImage from "../images/nav-logo.png";
+import presidentImage from "../images/president.jpeg";
+import secretaryImage from "../images/secretary.jpeg";
 
 export const About = () => {
   return (
@@ -42,13 +42,13 @@ export const About = () => {
                 <img
                   src={presidentImage}
                   alt="President"
-                  className="rounded-full w-64 h-64 mx-auto mb-4"
+                  className="rounded-full w-64 h-64 mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-lg font-semibold mb-2">
-                  President - John Doe
+                  President - Mr. Dheeraj Sharma
                 </h3>
                 <p>
-                  John Doe is a dedicated individual with a passion for
+                  Mr. Dheeraj is a dedicated individual with a passion for
                   community development and social welfare. With years of
                   experience in the nonprofit sector, he leads Hope Givers
                   Foundation with compassion and a strong commitment to
@@ -59,13 +59,13 @@ export const About = () => {
                 <img
                   src={secretaryImage}
                   alt="Secretary"
-                  className="rounded-full w-64 h-64 mx-auto mb-4"
+                  className="rounded-full w-64 h-64 mx-auto mb-4 object-cover object-top"
                 />
                 <h3 className="text-lg font-semibold mb-2">
-                  Secretary - Jane Smith
+                  Secretary - Miss Diksha
                 </h3>
                 <p>
-                  Jane Smith is a dedicated advocate for social justice and
+                  Miss Diksha is a dedicated advocate for social justice and
                   equality. With her exceptional organizational skills and
                   passion for making a difference, she plays a crucial role in
                   the day-to-day operations of Hope Givers Foundation and

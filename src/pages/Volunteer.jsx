@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Volunteer = () => {
   return (
     <div>
@@ -15,16 +13,16 @@ export const Volunteer = () => {
               the elderly and those in need.
             </p>
             <a
-              href="tel:123-456-7890"
+              href="tel:9602034848"
               className="bg-white text-blue-500 font-semibold px-8 py-3 rounded-lg mx-2 hover:bg-blue-100"
             >
-              Call us: 123-456-7890
+              Call us: 9602034848
             </a>
             <a
-              href="mailto:volunteer@hopegiversfoundation.org"
+              href="mailto:hopegiversfoundation99@gmail.com"
               className="bg-white text-blue-500 font-semibold px-8 py-3 rounded-lg mx-2 hover:bg-blue-100"
             >
-              Email us: volunteer@hopegiversfoundation.org
+              Email us: hopegiversfoundation99@gmail.com
             </a>
           </div>
         </div>
@@ -107,16 +105,16 @@ export const Volunteer = () => {
             </p>
             <div className="flex justify-center">
               <a
-                href="tel:123-456-7890"
+                href="tel:9602034848"
                 className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg mx-2"
               >
-                Call us: 123-456-7890
+                Call us: 9602034848
               </a>
               <a
-                href="mailto:volunteer@hopegiversfoundation.org"
+                href="mailto:hopegiversfoundation99@gmail.com"
                 className="bg-blue-600 text-white font-semibold px-8 py-3 rounded-lg mx-2"
               >
-                Email us: volunteer@hopegiversfoundation.org
+                Email us: hopegiversfoundation99@gmail.com
               </a>
             </div>
           </div>

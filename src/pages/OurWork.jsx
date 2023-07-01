@@ -1,10 +1,6 @@
-import React from "react";
-// import oldAgeHomeImage from "../images/old_age_home.jpg";
-// import blanketsDistributionImage from "../images/blankets_distribution.jpg";
-// import medicalEquipmentsImage from "../images/medical_equipments.jpg";
-import oldAgeHomeImage from "../images/nav-logo.png";
-import blanketsDistributionImage from "../images/nav-logo.png";
-import medicalEquipmentsImage from "../images/nav-logo.png";
+import oldAgeHomeImage from "../images/oldAge.jpeg";
+import blanketsDistributionImage from "../images/blanket.jpeg";
+import medicalEquipmentsImage from "../images/medical.jpeg";
 
 export const OurWork = () => {
   return (
