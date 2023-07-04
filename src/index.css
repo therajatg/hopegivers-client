@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.hero img {
-  height: 65vh;
-}
-
-.heading-container {
-  height: 65vh;
-  top: -50px;
+.zIndexOne {
+  z-index: 1;
 }

@@ -28,7 +28,7 @@ export const Navbar = ({ modal, setModal }) => {
       <div
         className={`lg:flex w-full justify-between items-center ${
           pathname === "/" ? "max-w-xl" : "max-w-2xl"
-        } font-medium hover:cursor-pointer`}
+        } font-medium hover:cursor-pointer hidden`}
       >
         <button
           type="button"
@@ -69,7 +69,8 @@ export const Navbar = ({ modal, setModal }) => {
         viewBox="0 0 24 24"
         fill="currentColor"
         className="w-6 h-6 lg:hidden cursor-pointer"
-        onClick={toggleDropdown}
+        // onClick={toggleDropdown}
+        onClick={() => setDropdownOpen(true)}
       >
         <path
           fillRule="evenodd"
@@ -81,10 +82,10 @@ export const Navbar = ({ modal, setModal }) => {
       {dropdownOpen && (
         <>
           <div
-            className="fixed inset-0"
+            className="fixed inset-0 zIndexOne"
             onClick={() => setDropdownOpen(false)}
           ></div>
-          <div className="absolute right-0 top-16 w-48 bg-white rounded-md shadow-lg lg:hidden">
+          <div className="absolute zIndexOne right-0 top-16 w-48 bg-white rounded-md shadow-lg lg:hidden">
             <Link
               to="/"
               className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
@@ -105,6 +106,13 @@ export const Navbar = ({ modal, setModal }) => {
               onClick={toggleDropdown}
             >
               OUR WORK
+            </Link>
+            <Link
+              to="/volunteer"
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+              onClick={toggleDropdown}
+            >
+              VOLUNTEER
             </Link>
             <Link
               to="/contact-us"

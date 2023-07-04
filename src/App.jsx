@@ -18,6 +18,7 @@ function App() {
   return (
     <div className="h-[100vh]">
       <Navbar modal={modal} setModal={setModal} />
+
       <Routes>
         <Route path="/" element={<Home modal={modal} setModal={setModal} />} />
         <Route
