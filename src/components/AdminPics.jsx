@@ -24,7 +24,6 @@ export const AdminPics = () => {
       });
       if (res.status === 200) {
         getImages();
-        setFile();
       }
     } catch (error) {
       console.log(error);
