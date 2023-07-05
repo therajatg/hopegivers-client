@@ -51,7 +51,7 @@ export const Navbar = ({ modal, setModal }) => {
         <Link to="/volunteer" className="hover:underline">
           VOLUNTEER
         </Link>
-        <Link to="/admin" className="hover:underline">
+        <Link to="/contact-us" className="hover:underline">
           CONTACT US
         </Link>
         {pathname === "/admin" && localStorage.getItem("token") && (
@@ -69,7 +69,6 @@ export const Navbar = ({ modal, setModal }) => {
         viewBox="0 0 24 24"
         fill="currentColor"
         className="w-6 h-6 lg:hidden cursor-pointer"
-        // onClick={toggleDropdown}
         onClick={() => setDropdownOpen(true)}
       >
         <path
