@@ -51,7 +51,7 @@ export const Navbar = ({ modal, setModal }) => {
         <Link to="/volunteer" className="hover:underline">
           VOLUNTEER
         </Link>
-        <Link to="/contact-us" className="hover:underline">
+        <Link to="/admin" className="hover:underline">
           CONTACT US
         </Link>
         {pathname === "/admin" && localStorage.getItem("token") && (
